@@ -1,37 +1,51 @@
-window.onload = function(){mainFun();};
-window.onmouseup = colorChange;
-function mainFun(){
-    document.body.style.background = 'rgb(4,209,225)';
-    document.getElementById("message").innerHTML = "Hackathon";
-    document.getElementById("message").className = "main";
-    document.getElementById("message").style.color = 'rgb(232,232,232)';
-    document.getElementById("message").style.color = "F0FF23";
-    setMiddle();
-    var loopM =  setInterval(mainLoop,250);
 
 
-    }
+
+
+onload = function(){getHype();};
+
+
+function getHype(){
+    $("body").css('background-color', 'rgb(4,209,225)');
+    $( "#message" )
+        .append( "GET" )
+        .addClass( "main" )
+        .css('color','rgb(255,0,0)')
+        .css('color', "F0FF23");
+    var hypeLoop =  setInterval(mainLoop,250);
+    onmouseup = function(){colorChange()};
+    setTimeout(function(){
+        clearTimeout(hypeLoop);
+        	$("body").css('background-color', 'rgb(252,251,227)');
+            $("#message")
+                .text("LANGFORD.")
+                .css('color', 'rgb(0,0,0)');
+            onmouseup = function(){};
+    },4000);
+}
+
 
 function mainLoop(){
     switch (Math.floor(Math.random() * 5 + 1)  ) {
         case 1:
-            document.getElementById("message").innerHTML = "WEBSITE";
+            $("#message").text( "WEBSITE");
             break;
         case 2:
-            document.getElementById("message").innerHTML = "HYPE";
+            $("#message").text( "HYPE");
             break;
         case 3:
-            document.getElementById("message").innerHTML = "TOM";
+            $("#message").text( "TOM");
             break;
         case 4:
-            document.getElementById("message").innerHTML = "LANGFORD";
+            $("#message").text( "LANGFORD");
             break;
         case 5:
-            document.getElementById("message").innerHTML = "HYPE";
+            $("#message").text( "HYPE");
             break;
     }
 
-    switch (Math.floor(Math.random() * 5 + 1)  ) {
+
+    switch (Math.floor(Math.random() * 4 + 1)  ) {
         case 1:
             document.body.style.background = 'rgb(4,209,225)';
             break;
@@ -41,32 +55,10 @@ function mainLoop(){
         case 3:
             document.body.style.background = 'rgb(249,9,178)';
             break;
-        case 5:
+        case 4:
             document.body.style.background = 'rgb(253,95,0)';
             break;
     }
-    /**
-    switch (Math.floor(Math.random() * 5 + 1)  ) {
-        case 1:
-            document.getElementById("message").style.color = "F7F3F9";
-            break;
-        case 2:
-            document.getElementById("message").style.color = "04D1E1";
-            break;
-        case 3:
-            document.getElementById("message").style.color = "04D1E1";
-            break;
-        case 4:
-            document.getElementById("message").style.color = "FD5F00";
-            break;
-        case 5:
-            document.getElementById("message").style.color = "000000";
-            break;
-    }**/
-
-
-
-
 }
 
 
@@ -89,34 +81,4 @@ function colorChange(){
             document.getElementById("message").style.color = "FFFFFF";
             break;
     }
-}
-
-
-
-
-function setTop(){
-    replacePosition()
-    document.getElementById("message").className += " top";
-}
-
-function setMiddle(){
-    replacePosition()
-    document.getElementById("message").className += " middle";
-}
-
-function setBottom(){
-    replacePosition()
-    document.getElementById("message").className += " bottom";
-}
-
-function replacePosition(){
-    document.getElementById("message").className =
-        document.getElementById("message").className.replace
-        ( /(?:^|\s)top(?!\S)/g , '' )
-    document.getElementById("message").className =
-        document.getElementById("message").className.replace
-        ( /(?:^|\s)middle(?!\S)/g , '' )
-    document.getElementById("message").className =
-        document.getElementById("message").className.replace
-        ( /(?:^|\s)bottom(?!\S)/g , '' )
 }

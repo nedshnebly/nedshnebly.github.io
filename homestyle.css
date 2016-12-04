@@ -4,7 +4,15 @@
     text-align: center;
     position: fixed;
     top:20%;
-    
+    margin-top: 8%;
+    }
+
+p.subMain{
+    font-family: Verdana,Geneva,sans-serif;
+    font-size: 10vw;
+    text-align: center;
+    position: fixed;
+
     }
 
 #body{
