@@ -4,7 +4,7 @@
     text-align: center;
     position: fixed;
     top:20%;
-    margin-top: 8%;
+
     }
 
 p.subMain{
@@ -12,6 +12,7 @@ p.subMain{
     font-size: 10vw;
     text-align: center;
     position: fixed;
+    margin-bottom: 1px;
 
     }
 
