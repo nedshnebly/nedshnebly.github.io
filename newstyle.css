@@ -11,10 +11,10 @@ p{
 }
 
 #premessage{
-    font-size: 10rem;
+    font-size: 10pw;
 }
 
 #message{
-    font-size: 12rem;
+    font-size: 12pw;
     font-weight: bolder;
 }
