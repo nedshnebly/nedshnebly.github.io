@@ -28,19 +28,19 @@ function getHype(){
 function mainLoop(){
     switch (Math.floor(Math.random() * 5 + 1)  ) {
         case 1:
-            $("#message").text( "WEBSITE");
+            $("#message").text( "1");
             break;
         case 2:
-            $("#message").text( "HYPE");
+            $("#message").text( "1");
             break;
         case 3:
-            $("#message").text( "TOM");
+            $("#message").text( "1");
             break;
         case 4:
-            $("#message").text( "LANGFORD");
+            $("#message").text( "1");
             break;
         case 5:
-            $("#message").text( "HYPE");
+            $("#message").text( "1");
             break;
     }
 
