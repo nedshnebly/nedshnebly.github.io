@@ -3,10 +3,12 @@
   <head>
     <title>Part 4</title>
     <style>
-      #hello_word {content: "Hello World";}
+      #hello_word::before { 
+        content: " Hello World";
+      }
     </style>
   </head>
   <body>
-    <p id="hello_world" style="content: "Hello World";"></p>
+    <p id="hello_world"></p>
   </body>
 </html>
